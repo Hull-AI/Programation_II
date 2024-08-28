@@ -6,10 +6,10 @@ package actividad_3_p2_Modulos;
  */
 public class Estudiante {
 
-    private int cedula ;
-    private String Ced = ""+this.cedula;
-    private char LastD = Ced.charAt(Ced.length()-1);
-    private int Modelo ;
+    private int cedula;
+    private String Ced;
+    private char LastD;
+    private int Modelo;
 
     public int getModelo() {
         return Modelo;
@@ -21,6 +21,8 @@ public class Estudiante {
 
     public Estudiante(int cedula) {
         this.cedula = cedula;
+        Ced = "" + this.cedula;
+        LastD = Ced.charAt(Ced.length() - 1);
     }
 
     public int getCadula() {
@@ -34,11 +36,4 @@ public class Estudiante {
     public char getLastD() {
         return LastD;
     }
-
-    @Override
-    public String toString() {
-        return "El estudiante de cedula: " + this.cedula;
-    }
-
 }
-
