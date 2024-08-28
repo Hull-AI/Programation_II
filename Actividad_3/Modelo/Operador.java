@@ -1,6 +1,5 @@
 package actividad_3_p2_Modulos;
 
-import java.text.DecimalFormat;
 import java.util.*;
 
 /**
@@ -15,16 +14,12 @@ public class Operador {
     private int CantidadEstudiantes;
     private int[] modelos = {0,0,0,0,0};
 
-    public Operador() {
-
-    }
-
     public void ejecutar() {
         Estudiantes = new ArrayList<>();
         Ingreso();
-        Modulo();
-        CalcularModulos();
-        MostrarModulos();
+        Modelo();
+        CalcularModelos();
+        MostrarModelos();
     }
 
     private void Ingreso() {
@@ -42,7 +37,7 @@ public class Operador {
 
     }
 
-    private void Modulo() {
+    private void Modelo() {
         for (int i = 0; i < Estudiantes.size(); i++) {
             switch (Estudiantes.get(i).getLastD()) {
                 case '1', '6':
@@ -71,7 +66,7 @@ public class Operador {
         }
     }
 
-    private void CalcularModulos() {
+    private void CalcularModelos() {
         for (int i = 0; i < Estudiantes.size(); i++) {
             switch (Estudiantes.get(i).getModelo()) {
                 case 1 ->
@@ -90,7 +85,7 @@ public class Operador {
         }
     }
 
-    private void MostrarModulos() {
+    private void MostrarModelos() {
         for (int j = 0; j < modelos.length; j++) {
             System.out.println("La cantidad de estudiantes del modelo #" + (j + 1) + " son: " + modelos[j]);
         }
